@@ -1,0 +1,120 @@
+<!doctype html>
+<!--
+__   __      _____      __   __     _____      _____     _____      _____       _____    _____
+/\_\ /_/\    /\___/\    /_/\ /\_\   /\ __/\    /\ __/\   ) ___ (    /\ __/\    /\_____\  /\ __/\
+( ( (_) ) )  / / _ \ \   ) ) \ ( (   ) )  \ \   ) )__\/  / /\_/\ \   ) )  \ \  ( (_____/  ) )  \ \
+\ \___/ /   \ \(_)/ /  /_/   \ \_\ / / /\ \ \ / / /    / /_/ (_\ \ / / /\ \ \  \ \__\   / / /\ \ \
+/ / _ \ \   / / _ \ \  \ \ \   / / \ \ \/ / / \ \ \_   \ \ )_/ / / \ \ \/ / /  / /__/_  \ \ \/ / /
+( (_( )_) ) ( (_( )_) )  )_) \ (_(   ) )__/ /   ) )__/\  \ \/_\/ /   ) )__/ /  ( (_____\  ) )__/ /
+\/_/ \_\/   \/_/ \_\/   \_\/ \/_/   \/___\/    \/___\/   )_____(    \/___\/    \/_____/  \/___\/
+_      _     __     _______     __   __       __         _____      _     _      _____
+/_/\  /\_\   /\_\  /\_______)\  /\_\ /_/\     /\_\       ) ___ (    /_/\ /\_\   /\_____\
+) ) )( ( (   \/_/  \(___  __\/ ( ( (_) ) )   ( ( (      / /\_/\ \   ) ) ) ( (  ( (_____/
+/_/ //\\ \_\   /\_\   / / /      \ \___/ /     \ \_\    / /_/ (_\ \ /_/ / \ \_\  \ \__\
+\ \ /  \ / /  / / /  ( ( (       / / _ \ \     / / /__  \ \ )_/ / / \ \ \_/ / /  / /__/_
+)_) /\ (_(  ( (_(    \ \ \     ( (_( )_) )   ( (_____(  \ \/_\/ /   \ \   / /  ( (_____\
+\_\/  \/_/   \/_/    /_/_/      \/_/ \_\/     \/_____/   )_____(     \_\_/_/    \/_____/
+ _____     __  __       __  __     __     __ __     ______    _______      _____    __   __      ______    __ __      __ __      __    __     __     _______
+/\  __/\  /\  /\  /\    /\_\\  /\  /\_\   /_/\__/\  / ____/\ /\_______)\  /\_____\  /_/\ /\_\    / ____/\  /_/\__/\   /_/\__/\   /\_\  /_/\   /\_\  /\_______)\
+) )(_ ) ) \ \ \/ / /   ( ( (/ / /  \/_/   ) ) ) ) ) ) ) __\/ \(___  __\/ ( (_____/  ) ) \ ( (    ) ) __\/  ) ) ) ) )  ) ) ) ) ) ( ( (  ) ) )  \/_/  \(___  __\/
+/ / __/ /   \ \__/ /     \ \_ / /    /\_\ /_/ /_/_/   \ \ \     / / /      \ \__\   /_/   \ \_\    \ \ \   /_/ /_/ /  /_/ /_/_/   \ \ \/ / /    /\_\   / / /
+\ \  _\ \    \__/ /      / /  \ \   / / / \ \ \ \ \   _\ \ \   ( ( (       / /__/_  \ \ \   / /    _\ \ \  \ \ \_\/   \ \ \ \ \    \ \  / /    / / /  ( ( (
+) )(__) )   / / /      ( (_(\ \ \ ( (_(   )_) ) \ \ )____) )   \ \ \     ( (_____\  )_) \ (_(    )____) )  )_) )      )_) ) \ \   ( (__) )   ( (_(    \ \ \
+\/____\/    \/_/        \/_//__\/  \/_/   \_\/ \_\/ \____\/    /_/_/      \/_____/  \_\/ \/_/    \____\/   \_\/       \_\/ \_\/    \/__\/     \/_/    /_/_/
+
+-->
+<html>
+
+<head>
+  <title>K______S_____</title>
+  <link href="stylesheet.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function darkmodeFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+  <script>
+    /* ---------------------------- CLOCK ---------------------------- */
+    function currentTime() {
+      var date = new Date(); /* creating object of Date class */
+      var hour = date.getHours();
+      var min = date.getMinutes();
+      var sec = date.getSeconds();
+      hour = updateTime(hour);
+      min = updateTime(min);
+      sec = updateTime(sec);
+      document.getElementById("clock").innerText = hour + ":" + min + ":" + sec; /* adding time to the div */
+      var t = setTimeout(function() {
+        currentTime()
+      }, 1000); /* setting timer */
+    }
+
+    function updateTime(k) {
+      if (k < 10) {
+        return "0" + k;
+      } else {
+        return k;
+      }
+    }
+  </script>
+</head>
+
+<body onload="currentTime()">
+
+  <!-- - - - - - - - - - - - - - FIXED HEADER  - - - - - - - - - - - - -  -->
+  <header>
+    <div class="box">
+      <h1> <a href="index.html" style="letter-spacing:1.5px;">K______S_____</a></h1>
+    </div>
+    <div class="box">
+      <h1 id="clock" style="padding-top:0px;"></h1>
+    </div>
+    <div class="box" style="text-align:right;">
+      <h1>BRB</h1>
+    </div>
+  </header>
+  <div id="content">
+    <div class="imagebox">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/8961359/original_52c0fbce66dea7782a242abc6087c673.jpg?1601752644?bc=0">
+    </div>
+
+  </div>
+<footer>
+  <div class="box">
+    This website is currently under construction, but you can find me <a href="https://www.instagram.com/k______s_____/" style="text-decoration:underline;">here</a>, <a href="https://goodtimesbadtimes.club" style="text-decoration:underline;">here</a>, <a href="https://docs.google.com/spreadsheets/d/1OzmEzg9hi_L0JwV479unE93M3qZjO1F5Wd0mBgDBZ3k/edit#gid=0" style="text-decoration:underline;">here</a> and/or <a href="https://personae.rocks/" style="text-decoration:underline;">here</a>.
+  </div>
+  <div class="box" style="text-align:right;">
+    <h1>✿</h1>
+  </div>
+</footer>
+
+
+
+
+  <script>
+    /* ---------------------------- COLLAPSIBLE ---------------------------- */
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+
+      });
+    }
+  </script>
+
+</body>
+
+</html>
